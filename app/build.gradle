@@ -20,10 +20,29 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+    //TabLayout
+    compile 'com.android.support:design:24.2.1'
+    //Bmob
+    compile('cn.bmob.android:bmob-sdk:3.5.0') {
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+        exclude group: 'io.reactivex:rxandroid'
+        exclude group: 'io.reactivex:rxjava'
+        exclude group: 'com.squareup.okio'
+    }
+    //CircleImageView
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //RxVolley
+    compile('com.kymjs.rxvolley:rxvolley:1.1.4') {
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+        exclude group: 'com.squareup.okio'
+        exclude group: 'io.reactivex'
+    }
+    //Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

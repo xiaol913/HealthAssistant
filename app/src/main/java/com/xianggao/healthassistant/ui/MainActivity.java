@@ -1,7 +1,9 @@
-package com.xianggao.healthassistant;
+package com.xianggao.healthassistant.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.xianggao.healthassistant.R;
 
 public class MainActivity extends AppCompatActivity {
 
