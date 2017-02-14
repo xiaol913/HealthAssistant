@@ -129,7 +129,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                                             dialog.dismiss();
                                             if (e == null) {
                                                 Toast.makeText(RegisteredActivity.this, R.string.register_completed, Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(RegisteredActivity.this, AddFamilyMembers.class));
+                                                finish();
                                             } else {
                                                 Toast.makeText(RegisteredActivity.this, getString(R.string.register_fail) + e.toString(), Toast.LENGTH_SHORT).show();
                                             }
