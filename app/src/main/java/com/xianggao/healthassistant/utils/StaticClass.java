@@ -7,5 +7,5 @@ package com.xianggao.healthassistant.utils;
 public class StaticClass {
 
     //Bmob key
-    public static final String BMOB_APP_ID = "9b323dcbe301c747c0ea48218fee5072";
+    public static final String BMOB_APP_ID = "bf43557d92139aa0452b664466bcc267";
 }
