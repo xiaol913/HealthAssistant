@@ -1,5 +1,6 @@
 package com.xianggao.healthassistant.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -24,6 +25,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
     private EditText et_name;
     private EditText et_age;
     private EditText et_id_num;
+    private EditText et_address;
     //性别
     private RadioButton rb_boy, rb_girl;
     private EditText et_pass;
@@ -48,6 +50,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
         et_name = (EditText) findViewById(R.id.et_name);
         et_age = (EditText) findViewById(R.id.et_age);
         et_id_num = (EditText) findViewById(R.id.et_id_num);
+        et_address = (EditText) findViewById(R.id.et_address);
         et_pass = (EditText) findViewById(R.id.et_pass);
         et_password = (EditText) findViewById(R.id.et_password);
         et_phone_number = (EditText) findViewById(R.id.et_phone_number);
@@ -95,6 +98,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                 String pass = et_pass.getText().toString().trim();
                 String password = et_password.getText().toString().trim();
                 String phonenum = et_phone_number.getText().toString().trim();
+                String address = et_address.getText().toString().trim();
                 final String verify_code = et_verify_code.getText().toString().trim();
                 //判断是否为空
                 if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(age) && !TextUtils.isEmpty(idnum) && !TextUtils.isEmpty(pass) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(phonenum)) {
@@ -113,6 +117,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                         user.setAge(Integer.parseInt(age));
                         user.setIdNumber(Integer.parseInt(idnum));
                         user.setMobilePhoneNumber(phonenum);
+                        user.setAddress(address);
                         //判断验证码是否正确
                         BmobSMS.verifySmsCode(phonenum, verify_code, new UpdateListener() {
                             @Override
@@ -124,7 +129,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                                             dialog.dismiss();
                                             if (e == null) {
                                                 Toast.makeText(RegisteredActivity.this, R.string.register_completed, Toast.LENGTH_SHORT).show();
-                                                finish();
+                                                startActivity(new Intent(RegisteredActivity.this, AddFamilyMembers.class));
                                             } else {
                                                 Toast.makeText(RegisteredActivity.this, getString(R.string.register_fail) + e.toString(), Toast.LENGTH_SHORT).show();
                                             }

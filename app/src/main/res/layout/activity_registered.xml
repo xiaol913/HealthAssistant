@@ -25,6 +25,13 @@
         android:hint="@string/text_id_num"
         android:lines="2" />
 
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_address"
+        android:lines="2" />
+
     <RadioGroup
         android:id="@+id/mRadioGroup"
         android:layout_width="match_parent"

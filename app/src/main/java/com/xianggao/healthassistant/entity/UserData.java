@@ -16,6 +16,15 @@ public class UserData extends BmobUser{
     private boolean sex;
     private String user_name;
     private int idNumber;
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public int getAge() {
         return age;
