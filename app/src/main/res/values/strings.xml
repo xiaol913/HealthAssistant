@@ -30,4 +30,11 @@
     <string name="not_verify">该账号手机未验证，请验证！</string>
     <string name="login_fail">登录失败</string>
     <string name="text_address">请输入家庭住址</string>
+    <string-array name="main_list">
+        <item>快速求医</item>
+        <item>我的问题</item>
+        <item>我的预约</item>
+        <item>我的检查化验</item>
+        <item>其他（暂无）</item>
+    </string-array>
 </resources>
