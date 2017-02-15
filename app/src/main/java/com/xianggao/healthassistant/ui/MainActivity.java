@@ -37,13 +37,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
     }
 
+    //初始化
     private void initView() {
         mTabLayout = (TabLayout) findViewById(R.id.mTabLayout);
         mViewPager = (ViewPager) findViewById(R.id.mViewPager);
+        //悬浮按钮
         fab_setting = (FloatingActionButton) findViewById(R.id.fab_setting);
         fab_setting.setOnClickListener(this);
         //预加载
         mViewPager.setOffscreenPageLimit(mFragment.size());
+        //mViewPager滑动监听
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         //设置适配器
         mViewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             //选中的item
@@ -72,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initData() {
         mTitile = new ArrayList<>();
         mTitile.add("主页");
-        mTitile.add("小知识");
+        mTitile.add("新闻");
         mTitile.add("个人中心");
         mFragment = new ArrayList<>();
         mFragment.add(new MainFragment());

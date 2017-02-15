@@ -9,7 +9,7 @@ import java.util.List;
  * Created by ElliotGa0 on 2017/2/14.
  */
 
-public class DataUtil {
+public class DataUtils {
 
     /**
      * 主菜单

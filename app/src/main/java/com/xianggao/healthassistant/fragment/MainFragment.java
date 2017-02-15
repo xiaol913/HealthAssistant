@@ -9,12 +9,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.adapter.MainMenuAdapter;
-import com.xianggao.healthassistant.utils.DataUtil;
-
-import java.util.zip.Inflater;
+import com.xianggao.healthassistant.ui.MyAssayActivity;
+import com.xianggao.healthassistant.ui.MyQuestionsActivity;
+import com.xianggao.healthassistant.ui.MyReservationsActivity;
+import com.xianggao.healthassistant.ui.QuickAskActivity;
+import com.xianggao.healthassistant.utils.DataUtils;
 
 /**
  * 项目名：  HealthAssistant
@@ -33,7 +36,7 @@ public class MainFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main,container,false);
         return view;
     }
 
@@ -43,12 +46,28 @@ public class MainFragment extends Fragment {
         menuName = this.getActivity().getResources().getStringArray(R.array.main_list);
         view_recycler = (RecyclerView) getView().findViewById(R.id.view_recycler);
         view_recycler.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        MainMenuAdapter adapter = new MainMenuAdapter(getActivity(), DataUtil.getMenuList(icons, menuName));
+        MainMenuAdapter adapter = new MainMenuAdapter(getActivity(), DataUtils.getMenuList(icons, menuName));
         view_recycler.setAdapter(adapter);
         adapter.setOnItemClickListener(new MainMenuAdapter.onItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
+                switch (position){
+                    case 0:
+                        startActivity(new Intent(getActivity(), QuickAskActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(getActivity(), MyQuestionsActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(getActivity(), MyReservationsActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(getActivity(), MyAssayActivity.class));
+                        break;
+                    case 4:
+                        Toast.makeText(getActivity(),"暂无",Toast.LENGTH_SHORT).show();
+                        break;
+                }
             }
         });
     }

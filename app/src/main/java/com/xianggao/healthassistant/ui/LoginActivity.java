@@ -95,4 +95,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
+
+    //假设我输入用户名密码，但是我不点击登录，而是直接退出了
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //保存状态
+        ShareUtils.putBoolean(this, "keepPass", keep_password.isChecked());
+        //是否记住密码
+        if (keep_password.isChecked()) {
+            //记住用户名和密码
+            ShareUtils.putString(this, "name", et_phone_num.getText().toString().trim());
+            ShareUtils.putString(this, "password", et_password.getText().toString().trim());
+        } else {
+            ShareUtils.delShare(this, "name");
+            ShareUtils.delShare(this, "password");
+        }
+    }
 }

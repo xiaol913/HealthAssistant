@@ -37,7 +37,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.RegisteredActivity" />
-        <activity android:name=".ui.AddFamilyMembers"></activity>
+        <activity android:name=".ui.AddFamilyMembers" />
+        <activity android:name=".ui.QuickAskActivity" />
+        <activity android:name=".ui.MyQuestionsActivity" />
+        <activity android:name=".ui.MyReservationsActivity" />
+        <activity android:name=".ui.MyAssayActivity" />
+        <activity android:name=".ui.WebViewActivity" />
+        <activity android:name=".ui.ChangePassActivity"></activity>
     </application>
 
 </manifest>
