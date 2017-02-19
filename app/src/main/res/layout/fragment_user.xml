@@ -67,6 +67,8 @@
                     android:textSize="24sp" />
 
                 <TextView
+                    android:id="@+id/et_name"
+                    android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -84,6 +86,8 @@
                     android:textSize="24sp" />
 
                 <TextView
+                    android:id="@+id/et_age"
+                    android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -100,30 +104,11 @@
                     android:text="性别："
                     android:textSize="24sp" />
 
-                <RadioGroup
-                    android:id="@+id/mRadioGroup"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/et_sex"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rb_boy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:checked="true"
-                        android:text="男"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/rb_girl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:text="女"
-                        android:textSize="20sp" />
-
-                </RadioGroup>
+                    android:textSize="24sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -139,6 +124,8 @@
                     android:textSize="24sp" />
 
                 <TextView
+                    android:id="@+id/et_id_num"
+                    android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -156,6 +143,8 @@
                     android:textSize="24sp" />
 
                 <TextView
+                    android:id="@+id/et_phone_num"
+                    android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -173,6 +162,8 @@
                     android:textSize="24sp" />
 
                 <TextView
+                    android:id="@+id/et_address"
+                    android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -260,6 +251,7 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
+                android:id="@+id/et_quit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="退出登录"
