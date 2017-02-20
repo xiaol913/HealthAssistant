@@ -1,12 +1,12 @@
 package com.xianggao.healthassistant.ui;
 
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 
 import com.xianggao.healthassistant.R;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //预加载
         mViewPager.setOffscreenPageLimit(mFragment.size());
         //mViewPager滑动监听
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //返回item的个数
             @Override
             public int getCount() {
-                return null!=mFragment?mFragment.size():0;
+                return null != mFragment ? mFragment.size() : 0;
             }
             //设置标题
 

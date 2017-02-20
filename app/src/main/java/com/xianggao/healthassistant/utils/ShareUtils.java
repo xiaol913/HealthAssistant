@@ -13,7 +13,8 @@ import android.content.SharedPreferences;
  */
 
 public class ShareUtils {
-    public static final String NAME ="config";
+    public static final String NAME = "config";
+
     //键 值
     public static void putString(Context mContext, String key, String value) {
         SharedPreferences sp = mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE);

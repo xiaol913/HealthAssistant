@@ -17,17 +17,18 @@ import java.util.List;
  * Created by ElliotGa0 on 2017/2/14.
  */
 
-public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewHolder>{
+public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewHolder> {
     protected Context context;
     protected List<MenuData> mainMenu;
 
-    public MainMenuAdapter(Context context, List<MenuData> mainMenu){
-        this.mainMenu=mainMenu;
-        this.context=context;
+    public MainMenuAdapter(Context context, List<MenuData> mainMenu) {
+        this.mainMenu = mainMenu;
+        this.context = context;
     }
+
     @Override
     public MainMenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new MainMenuViewHolder(LayoutInflater.from(context).inflate(R.layout.main_items,null));
+        return new MainMenuViewHolder(LayoutInflater.from(context).inflate(R.layout.main_item, null));
     }
 
     @Override
@@ -36,12 +37,12 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewHolder>{
         holder.menu_icon.setImageResource(menuData.icon);
         holder.menu_text.setText(menuData.menuName);
         //判断是是否点击
-        if(onItemClickListener!=null){
+        if (onItemClickListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int layoutPos=holder.getLayoutPosition();
-                    onItemClickListener.onItemClick(holder.itemView,layoutPos);
+                    int layoutPos = holder.getLayoutPosition();
+                    onItemClickListener.onItemClick(holder.itemView, layoutPos);
                 }
             });
         }
@@ -49,29 +50,30 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuViewHolder>{
 
     @Override
     public int getItemCount() {
-        return null!=mainMenu?mainMenu.size():0;
+        return null != mainMenu ? mainMenu.size() : 0;
     }
 
     //点击事件
-    public interface onItemClickListener{
-        void onItemClick(View view ,int position);
+    public interface onItemClickListener {
+        void onItemClick(View view, int position);
     }
+
     public onItemClickListener onItemClickListener;
 
-    public void setOnItemClickListener(onItemClickListener onItemClickListener){
-        this.onItemClickListener=onItemClickListener;
+    public void setOnItemClickListener(onItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 }
 
 
-class MainMenuViewHolder extends RecyclerView.ViewHolder{
+class MainMenuViewHolder extends RecyclerView.ViewHolder {
     public ImageView menu_icon;
     public TextView menu_text;
 
-    public MainMenuViewHolder(View itemView){
+    public MainMenuViewHolder(View itemView) {
         super(itemView);
-        menu_icon= (ImageView) itemView.findViewById(R.id.menu_icon);
-        menu_text= (TextView) itemView.findViewById(R.id.menu_text);
+        menu_icon = (ImageView) itemView.findViewById(R.id.menu_icon);
+        menu_text = (TextView) itemView.findViewById(R.id.menu_text);
     }
 
 }

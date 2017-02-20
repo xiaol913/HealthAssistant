@@ -37,13 +37,22 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.RegisteredActivity" />
-        <activity android:name=".ui.AddFamilyMembers" />
-        <activity android:name=".ui.QuickAskActivity" />
+        <activity android:name=".ui.AskQuestionActivity" />
         <activity android:name=".ui.MyQuestionsActivity" />
+        <activity android:name=".ui.DoReservationsActivity" />
         <activity android:name=".ui.MyReservationsActivity" />
-        <activity android:name=".ui.MyAssayActivity" />
         <activity android:name=".ui.WebViewActivity" />
-        <activity android:name=".ui.ChangePassActivity"></activity>
+        <activity android:name=".ui.FamilyActivity" />
+        <activity android:name=".ui.FamilyMemberActivity" />
+        <activity android:name=".ui.CaseInfoActivity" />
+        <activity android:name=".ui.RegisterFamilyActivity" />
+        <activity android:name=".ui.AddFamilyMember" />
+        <activity android:name=".ui.EditUserInfoActivity" />
+        <activity android:name=".ui.EditPassActivity" />
+        <activity android:name=".ui.QuestionInfoActivity" />
+        <activity android:name=".ui.SelectFamilyActivity" />
+        <activity android:name=".ui.SelectMapActivity" />
+        <activity android:name=".ui.PayActivity"></activity>
     </application>
 
 </manifest>

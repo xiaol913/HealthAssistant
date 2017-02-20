@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="我的问题"
+        android:text="我的检查化验"
         android:textSize="25sp" />
 
 
@@ -29,7 +29,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_question_time"
+            android:id="@+id/tv_assay_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tv_assay_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -40,23 +50,33 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tv_question_title"
+            android:id="@+id/tv_assay_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="标题"
+            android:text="部门"
             android:textColor="#000" />
 
         <TextView
-            android:id="@+id/tv_question_count"
+            android:id="@+id/tv_assay_type"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="回复"
+            android:text="种类"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tv_assay_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="状态"
             android:textColor="#000" />
     </LinearLayout>
 
@@ -69,7 +89,7 @@
         android:background="#3d000000" />
 
     <ListView
-        android:id="@+id/list_question"
+        android:id="@+id/list_assay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

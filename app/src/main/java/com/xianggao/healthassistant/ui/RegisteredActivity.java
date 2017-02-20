@@ -71,7 +71,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                 String age = et_age.getText().toString().trim();
                 String idnum = et_id_num.getText().toString().trim();
                 String pass = et_pass.getText().toString().trim();
-                pass=DataUtils.getMD5(pass);
+                pass = DataUtils.getMD5(pass);
                 String password = et_password.getText().toString().trim();
                 password = DataUtils.getMD5(password);
                 String phonenum = et_phone_number.getText().toString().trim();
@@ -91,14 +91,14 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                         //将数据保存
                         JSONObject json = new JSONObject();
                         try {
-                            json.put("user_phone_num",phonenum);
-                            json.put("user_name",name);
-                            json.put("user_id_card",idnum);
-                            json.put("user_age",age);
-                            json.put("user_sex",sex);
-                            json.put("user_address",address);
-                            json.put("user_password",password);
-                            json.put("user_level",0);
+                            json.put("user_phone_num", phonenum);
+                            json.put("user_name", name);
+                            json.put("user_id_card", idnum);
+                            json.put("user_age", age);
+                            json.put("user_sex", sex);
+                            json.put("user_address", address);
+                            json.put("user_password", password);
+                            json.put("user_level", 0);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -109,10 +109,10 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                             public void onSuccess(String t) {
                                 //判断是否注册成功
                                 dialog.dismiss();
-                                if (t.toString().equals("true")){
+                                if (t.toString().equals("true")) {
                                     Toast.makeText(RegisteredActivity.this, R.string.register_completed, Toast.LENGTH_SHORT).show();
                                     finish();
-                                }else {
+                                } else {
                                     Toast.makeText(RegisteredActivity.this, R.string.register_fail, Toast.LENGTH_SHORT).show();
                                 }
                             }

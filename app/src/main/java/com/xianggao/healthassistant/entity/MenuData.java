@@ -8,7 +8,7 @@ public class MenuData {
     public int icon;
     public String menuName;
 
-    public MenuData(int icon, String menuName){
+    public MenuData(int icon, String menuName) {
         this.icon = icon;
         this.menuName = menuName;
     }

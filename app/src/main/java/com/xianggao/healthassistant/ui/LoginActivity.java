@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView tv_forget;
     private CustomDialog dialog;
     private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=userLogin";
-    private HashMap<String, String> session= new HashMap<>();
+    private HashMap<String, String> session = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,13 +96,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             } else if (result.equals("wrong")) {
                                 Toast.makeText(getApplication(), R.string.pass_wrong, Toast.LENGTH_SHORT).show();
                             } else {
-                                session = JsonUtils.parsingJson(session,result);
-                                session.put("sessionId",headers.get("Set-Cookie"));
+                                session = JsonUtils.parsingLogin(session, result);
+                                session.put("sessionId", headers.get("Set-Cookie"));
                                 Context context = view.getContext();
                                 Intent intent = new Intent(context, MainActivity.class);
                                 Bundle map = new Bundle();
-                                map.putSerializable("sessionId",session);
-                                intent.putExtra("session",map);
+                                map.putSerializable("sessionId", session);
+                                intent.putExtra("session", map);
                                 Toast.makeText(getApplication(), R.string.login_success, Toast.LENGTH_SHORT).show();
                                 context.startActivity(intent);
                                 finish();

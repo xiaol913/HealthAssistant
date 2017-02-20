@@ -68,9 +68,9 @@
 
                 <TextView
                     android:id="@+id/et_name"
-                    android:textSize="24sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,9 +87,9 @@
 
                 <TextView
                     android:id="@+id/et_age"
-                    android:textSize="24sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -108,7 +108,7 @@
                     android:id="@+id/et_sex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -125,9 +125,9 @@
 
                 <TextView
                     android:id="@+id/et_id_num"
-                    android:textSize="24sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -144,9 +144,9 @@
 
                 <TextView
                     android:id="@+id/et_phone_num"
-                    android:textSize="24sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -163,9 +163,9 @@
 
                 <TextView
                     android:id="@+id/et_address"
-                    android:textSize="24sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -185,6 +185,7 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
+                android:id="@+id/et_fam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="我的家庭"
@@ -207,6 +208,7 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
+                android:id="@+id/et_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="修改资料"
@@ -229,6 +231,7 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
+                android:id="@+id/et_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="修改密码"
