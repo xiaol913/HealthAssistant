@@ -16,6 +16,7 @@ import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.entity.FamilyData;
 import com.xianggao.healthassistant.utils.JsonUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +28,7 @@ public class FamilyActivity extends BaseActivity implements View.OnClickListener
     private TextView et_fam_name;
     private ListView list_member;
     private Button btn_add;
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=getFamily";
+    private String url = StaticClass.HTTP+"getFamily";
     private AlertDialog dialog;
     private List<FamilyData> mList = new ArrayList<>();
     private String user_id = null;

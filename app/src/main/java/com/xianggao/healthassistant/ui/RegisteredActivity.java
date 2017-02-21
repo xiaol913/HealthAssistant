@@ -14,6 +14,7 @@ import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.utils.DataUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 import com.xianggao.healthassistant.view.CustomDialog;
 
 import org.json.JSONException;
@@ -87,7 +88,7 @@ public class RegisteredActivity extends BaseActivity implements View.OnClickList
                             sex = "男";
                         else
                             sex = "女";
-                        String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=userReg";
+                        String url = StaticClass.HTTP+"userReg";
                         //将数据保存
                         JSONObject json = new JSONObject();
                         try {

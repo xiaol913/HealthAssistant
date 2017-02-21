@@ -12,6 +12,7 @@ import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.utils.DataUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,7 +20,7 @@ import org.json.JSONObject;
 public class AddFamilyMember extends BaseActivity implements View.OnClickListener {
     private EditText et_fam_phone,et_fam_password;
     private Button btn_submit;
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=addFamMem";
+    private String url = StaticClass.HTTP+"addFamMem";
     private String user_family_num =null;
 
     @Override

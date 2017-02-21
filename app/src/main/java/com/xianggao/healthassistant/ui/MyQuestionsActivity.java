@@ -14,6 +14,7 @@ import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.entity.QuestionData;
 import com.xianggao.healthassistant.utils.JsonUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +28,7 @@ public class MyQuestionsActivity extends BaseActivity {
     private AlertDialog dialog;
     private HashMap<String, String> session;
     private List<QuestionData> mList = new ArrayList<>();
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=getQue";
+    private String url = StaticClass.HTTP+"getQue";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

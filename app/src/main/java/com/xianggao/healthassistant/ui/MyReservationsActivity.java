@@ -11,6 +11,7 @@ import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.entity.ReservationData;
 import com.xianggao.healthassistant.utils.JsonUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,8 +26,8 @@ public class MyReservationsActivity extends BaseActivity {
     private List<ReservationData> mList = new ArrayList<>();
 
     private HashMap<String, String> session;
-    private String userIdUrl = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=getResByUserId";
-    private String famNumUrl = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=getResByFamNum";
+    private String userIdUrl = StaticClass.HTTP+"getResByUserId";
+    private String famNumUrl = StaticClass.HTTP+"getResByFamNum";
     private String user_family_num;
 
     @Override

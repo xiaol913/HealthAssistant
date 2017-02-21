@@ -20,6 +20,7 @@ import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.utils.DataUtils;
 import com.xianggao.healthassistant.utils.JsonUtils;
 import com.xianggao.healthassistant.utils.ShareUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 import com.xianggao.healthassistant.view.CustomDialog;
 
 import org.json.JSONException;
@@ -35,7 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button btn_login, btn_registered;
     private TextView tv_forget;
     private CustomDialog dialog;
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=userLogin";
+    private String url = StaticClass.HTTP+"userLogin";
     private HashMap<String, String> session = new HashMap<>();
 
     @Override

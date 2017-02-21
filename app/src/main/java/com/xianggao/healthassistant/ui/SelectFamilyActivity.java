@@ -12,6 +12,7 @@ import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.entity.FamilyData;
 import com.xianggao.healthassistant.utils.JsonUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,7 +23,7 @@ import java.util.List;
 
 public class SelectFamilyActivity extends BaseActivity {
     private ListView list_member;
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=getFamily";
+    private String url = StaticClass.HTTP+"getFamily";
     private List<FamilyData> mList = new ArrayList<>();
     private String user_family_num = null;
     private HashMap<String, String> session;

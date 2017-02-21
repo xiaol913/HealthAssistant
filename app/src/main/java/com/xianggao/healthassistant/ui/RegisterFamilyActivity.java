@@ -12,6 +12,7 @@ import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.utils.L;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,7 +21,7 @@ public class RegisterFamilyActivity extends BaseActivity implements View.OnClick
     private EditText et_fam_name;
     private Button btn_submit;
     private String user_id = null;
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=createFamily";
+    private String url = StaticClass.HTTP+"createFamily";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

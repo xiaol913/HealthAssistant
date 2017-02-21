@@ -12,6 +12,7 @@ import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.utils.DataUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,7 +21,7 @@ public class EditPassActivity extends BaseActivity implements View.OnClickListen
     private Button btn_edit;
     private EditText et_old_pass, et_new_pass, et_new_pass_again;
     private String user_id;
-    private String passUrl = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=editPass";
+    private String passUrl = StaticClass.HTTP+"editPass";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

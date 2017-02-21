@@ -12,6 +12,7 @@ import com.kymjs.rxvolley.RxVolley;
 import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +28,7 @@ public class EditUserInfoActivity extends BaseActivity implements View.OnClickLi
     private RadioButton rb_mem_male, rb_mem_female;
     private Button btn_member_edit;
     private Button btn_member_save;
-    private String editUrl = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=editFam";
+    private String editUrl = StaticClass.HTTP+"editFam";
     private String user_id = null;
     private HashMap<String, String> session;
 

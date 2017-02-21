@@ -12,6 +12,7 @@ import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.utils.L;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,7 +25,7 @@ public class AskQuestionActivity extends BaseActivity implements View.OnClickLis
     private RadioButton rb_Q_m, rb_Q_f;
     private Button btn_Q_submit;
     private HashMap<String, String> session;
-    private String postUrl = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=postQ";
+    private String postUrl = StaticClass.HTTP+"postQ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,6 +17,7 @@ import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.entity.CaseData;
 import com.xianggao.healthassistant.entity.UserData;
 import com.xianggao.healthassistant.utils.JsonUtils;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,9 +36,9 @@ public class FamilyMemberActivity extends BaseActivity implements View.OnClickLi
     private Button btn_member_edit;
     private Button btn_member_del;
     private Button btn_member_save;
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=getUser";
-    private String delUrl = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=delFam";
-    private String editUrl = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=editFam";
+    private String url = StaticClass.HTTP+"getUser";
+    private String delUrl = StaticClass.HTTP+"delFam";
+    private String editUrl = StaticClass.HTTP+"editFam";
     private List<UserData> mUserList = new ArrayList<>();
     private List<CaseData> mCaseList = new ArrayList<>();
     private String user_id = null;

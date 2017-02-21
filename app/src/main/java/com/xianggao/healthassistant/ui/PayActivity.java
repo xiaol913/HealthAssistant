@@ -11,6 +11,7 @@ import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.client.HttpParams;
 import com.xianggao.healthassistant.R;
 import com.xianggao.healthassistant.utils.L;
+import com.xianggao.healthassistant.utils.StaticClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,7 +30,7 @@ public class PayActivity extends BaseActivity implements View.OnClickListener {
     private String hos_name = "省中院";
     private String hos_part = "化验科";
     private String hos_id = "1";
-    private String url = "http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=postR";
+    private String url = StaticClass.HTTP+"postR";
     private HashMap<String, String> session = new HashMap<>();
 
     @Override
