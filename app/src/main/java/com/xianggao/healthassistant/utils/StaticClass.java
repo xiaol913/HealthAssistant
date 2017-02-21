@@ -7,7 +7,7 @@ package com.xianggao.healthassistant.utils;
 public class StaticClass {
 
     //网站地址
-    public static final String HTTP ="http://127.0.0.1:8888/healthassistantsys/mobiles/userAction.php?act=";
+    public static final String HTTP ="http://192.168.1.64/healthassistantsys/mobiles/userAction.php?act=";
     //微信精选 key
     public static final String WECHAT_APP_ID = "dce9ecc0d080fdae5758243464dd6fed";
 
